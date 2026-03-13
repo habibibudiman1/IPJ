@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="docs/preview.png" alt="PT Intiboga Pangan Jaya - Website Preview" width="800"/>
-</p>
-
 <h1 align="center">🏭 PT Intiboga Pangan Jaya</h1>
 
 <p align="center">
@@ -39,12 +35,14 @@ Website **company profile modern** untuk **PT Intiboga Pangan Jaya** — perusah
 <td width="50%">
 
 ### 🌍 Bilingual (2 Bahasa)
+
 Pengunjung bisa memilih **Bahasa Indonesia** atau **English** lewat tombol language switcher. Setiap bahasa punya URL sendiri — SEO-friendly!
 
 </td>
 <td width="50%">
 
 ### 📧 Contact Form → Email + Database
+
 Setiap inquiry yang masuk otomatis **tersimpan ke database** dan mengirim **email notifikasi** ke perusahaan. Tidak ada lead yang terlewat!
 
 </td>
@@ -53,12 +51,14 @@ Setiap inquiry yang masuk otomatis **tersimpan ke database** dan mengirim **emai
 <td>
 
 ### 📝 Edit Konten Tanpa Coding
+
 Semua teks dan gambar di website bisa diedit lewat **Sanity Studio** (CMS). Tim non-teknis bisa update konten kapan saja, langsung live.
 
 </td>
 <td>
 
 ### 📱 Responsive & Cepat
+
 Tampil sempurna di **HP, tablet, dan desktop**. Dioptimasi dengan image compression, code splitting, dan CDN caching untuk loading super cepat.
 
 </td>
@@ -67,12 +67,14 @@ Tampil sempurna di **HP, tablet, dan desktop**. Dioptimasi dengan image compress
 <td>
 
 ### 🎨 Desain Modern & Animasi Halus
+
 Menggunakan **Framer Motion** untuk animasi smooth dan **shadcn/ui** untuk komponen UI yang premium. Kesan profesional di setiap halaman.
 
 </td>
 <td>
 
 ### 🔍 SEO Ready
+
 Dilengkapi **meta tags**, **OpenGraph** untuk social sharing, **sitemap.xml**, dan **robots.txt**. Siap ditemukan di Google!
 
 </td>
@@ -83,13 +85,13 @@ Dilengkapi **meta tags**, **OpenGraph** untuk social sharing, **sitemap.xml**, d
 
 ## 📄 Halaman Website
 
-| Halaman | Isi |
-|---|---|
-| 🏠 **Home** | Hero section, angka pencapaian perusahaan, highlight produk, proses kerja, CTA |
-| 🏢 **About Us** | Profil perusahaan, visi & misi, core values |
-| 📦 **Products** | Katalog produk lengkap dengan detail & aplikasi penggunaan |
-| 🏆 **Advantages** | Keunggulan perusahaan & segmen klien yang dilayani |
-| 📞 **Contact** | Informasi kontak + form inquiry yang fungsional |
+| Halaman           | Isi                                                                            |
+| ----------------- | ------------------------------------------------------------------------------ |
+| 🏠 **Home**       | Hero section, angka pencapaian perusahaan, highlight produk, proses kerja, CTA |
+| 🏢 **About Us**   | Profil perusahaan, visi & misi, core values                                    |
+| 📦 **Products**   | Katalog produk lengkap dengan detail & aplikasi penggunaan                     |
+| 🏆 **Advantages** | Keunggulan perusahaan & segmen klien yang dilayani                             |
+| 📞 **Contact**    | Informasi kontak + form inquiry yang fungsional                                |
 
 ---
 
@@ -209,17 +211,17 @@ Pengunjung tinggal klik tombol 🌐 di navigation bar untuk ganti bahasa. URL la
 
 Semua konten website bisa diedit lewat **Sanity Studio** tanpa perlu coding:
 
-| Konten | Yang Bisa Diedit |
-|---|---|
+| Konten               | Yang Bisa Diedit                           |
+| -------------------- | ------------------------------------------ |
 | 🏢 Profil Perusahaan | Deskripsi, focus supply, quality statement |
-| 🎯 Visi & Misi | Pernyataan visi, item misi |
-| 💎 Core Values | 6 nilai perusahaan |
-| 📦 Produk | Detail, fitur, spesifikasi, gambar |
-| ⚙️ Aplikasi Produk | Use-case per produk |
-| 🏆 Keunggulan | Kelebihan perusahaan |
-| 👥 Segmen Klien | Target market |
-| 📞 Kontak | Alamat, telepon, email, jam kerja |
-| 🖼️ Galeri | Foto perusahaan |
+| 🎯 Visi & Misi       | Pernyataan visi, item misi                 |
+| 💎 Core Values       | 6 nilai perusahaan                         |
+| 📦 Produk            | Detail, fitur, spesifikasi, gambar         |
+| ⚙️ Aplikasi Produk   | Use-case per produk                        |
+| 🏆 Keunggulan        | Kelebihan perusahaan                       |
+| 👥 Segmen Klien      | Target market                              |
+| 📞 Kontak            | Alamat, telepon, email, jam kerja          |
+| 🖼️ Galeri            | Foto perusahaan                            |
 
 > 📖 Panduan untuk editor konten: [docs/CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md)
 
@@ -240,30 +242,30 @@ Website di-deploy ke **Vercel** dengan langkah:
 
 ## 📚 Dokumentasi
 
-| Dokumen | Deskripsi |
-|---|---|
-| 📖 [QUICKSTART.md](docs/QUICKSTART.md) | Mulai dalam 10 menit |
-| 🚢 [DEPLOYMENT.md](docs/DEPLOYMENT.md) | Panduan deploy ke production |
-| ✏️ [CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md) | Panduan edit konten via CMS |
-| 🌍 [I18N_GUIDE.md](docs/I18N_GUIDE.md) | Panduan developer bilingual |
-| ✅ [SETUP_CHECKLIST.md](docs/SETUP_CHECKLIST.md) | Checklist setup & deploy |
-| 📘 [PANDUAN_SETUP_LENGKAP.md](docs/PANDUAN_SETUP_LENGKAP.md) | Panduan setup lengkap (Bahasa) |
-| 📋 [PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md) | Ringkasan arsitektur project |
+| Dokumen                                                          | Deskripsi                      |
+| ---------------------------------------------------------------- | ------------------------------ |
+| 📖 [QUICKSTART.md](docs/QUICKSTART.md)                           | Mulai dalam 10 menit           |
+| 🚢 [DEPLOYMENT.md](docs/DEPLOYMENT.md)                           | Panduan deploy ke production   |
+| ✏️ [CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md)                     | Panduan edit konten via CMS    |
+| 🌍 [I18N_GUIDE.md](docs/I18N_GUIDE.md)                           | Panduan developer bilingual    |
+| ✅ [SETUP_CHECKLIST.md](docs/SETUP_CHECKLIST.md)                 | Checklist setup & deploy       |
+| 📘 [PANDUAN_SETUP_LENGKAP.md](docs/PANDUAN_SETUP_LENGKAP.md)     | Panduan setup lengkap (Bahasa) |
+| 📋 [PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md)                 | Ringkasan arsitektur project   |
 | 🔧 [TROUBLESHOOTING_NPM_DEV.md](docs/TROUBLESHOOTING_NPM_DEV.md) | Troubleshooting npm di Windows |
 
 ---
 
 ## 🏢 Tentang PT Intiboga Pangan Jaya
 
-| | |
-|---|---|
-| **Perusahaan** | PT Intiboga Pangan Jaya |
-| **Industri** | Supplier Bahan Makanan (B2B FMCG) |
-| **Lokasi** | JL. Raya Rancaekek – Majalaya No. 254, Bandung, Jawa Barat |
-| **Produk Utama** | Potato Flakes, Glucose Syrup, Milk Powder, Maltodextrin, Modified Starch |
-| **Target Market** | Pabrik makanan, Bakery, Produsen snack, Horeca, Distributor |
-| 📧 **Email** | faridalfarizi@intiboga.com |
-| 📱 **Phone** | +62 813 6119 6131 |
+|                   |                                                                          |
+| ----------------- | ------------------------------------------------------------------------ |
+| **Perusahaan**    | PT Intiboga Pangan Jaya                                                  |
+| **Industri**      | Supplier Bahan Makanan (B2B FMCG)                                        |
+| **Lokasi**        | JL. Raya Rancaekek – Majalaya No. 254, Bandung, Jawa Barat               |
+| **Produk Utama**  | Potato Flakes, Glucose Syrup, Milk Powder, Maltodextrin, Modified Starch |
+| **Target Market** | Pabrik makanan, Bakery, Produsen snack, Horeca, Distributor              |
+| 📧 **Email**      | faridalfarizi@intiboga.com                                               |
+| 📱 **Phone**      | +62 813 6119 6131                                                        |
 
 ---
 
