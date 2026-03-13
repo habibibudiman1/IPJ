@@ -1,0 +1,16 @@
+{
+  "name": "intiboga-sanity-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "dependencies": {
+    "sanity": "^3.68.1",
+    "@sanity/vision": "^3.68.1"
+  }
+}

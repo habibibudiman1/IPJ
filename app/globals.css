@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === IPJ Brand Colors === */
+    /* Green #7cad43 = Secondary (brand identity) */
+    /* Yellow #ebbd41 = Primary (CTA/highlights) */
+    /* Dark Green = Navbar/Footer/Hero backgrounds */
+
+    /* Backgrounds */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    /* Brand: Yellow for CTAs */
+    --primary: 45 79% 58%; /* #ebbd41 */
+    --primary-foreground: 220 20% 15%;
+
+    /* Brand: Green */
+    --secondary: 93 44% 47%; /* #7cad43 */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted */
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent: Light green */
+    --accent: 100 52% 65%; /* #98cd7d */
+    --accent-foreground: 220 20% 15%;
+
+    /* Border/Input */
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 45 79% 58%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --radius: 0.5rem;
+
+    /* Charts */
+    --chart-1: 45 79% 58%;
+    --chart-2: 93 44% 47%;
+    --chart-3: 100 52% 65%;
+    --chart-4: 140 62% 87%;
+    --chart-5: 60 70% 50%;
+
+    /* Custom: Dark Green for sections */
+    --dark-green: 110 30% 12%;
+    --dark-green-lighter: 110 25% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+}
+
+/* Custom utility classes for the dark green sections */
+@layer utilities {
+  .bg-dark-section {
+    background-color: hsl(var(--dark-green));
+  }
+  .bg-dark-section-lighter {
+    background-color: hsl(var(--dark-green-lighter));
+  }
+}

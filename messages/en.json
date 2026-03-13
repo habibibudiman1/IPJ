@@ -1,0 +1,317 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "advantages": "Advantages",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "title": "Integrated Supply Service for High-Quality Food Ingredients",
+    "subtitle": "Integrated Supply Service with Commitment to Supporting Your Business",
+    "contactUs": "Contact Us",
+    "inquireProducts": "Inquire Products",
+    "premiumQuality": "Premium Quality",
+    "certifiedSafe": "Certified & Safe Ingredients",
+    "sustainable": "Sustainable",
+    "ecoFriendly": "Eco-Friendly Sourcing"
+  },
+  "metrics": {
+    "quality": "High-quality food ingredient supplier in Indonesia",
+    "location": "Strategic location in West Java",
+    "standards": "Strict quality control & hygiene standards",
+    "supply": "Reliable and consistent supply chain"
+  },
+  "products": {
+    "title": "Our Core Products",
+    "subtitle": "High-quality ingredients for your manufacturing needs",
+    "viewAll": "View All Products",
+    "potatoFlakes": {
+      "title": "Potato Flakes",
+      "description": "Premium potato flakes for versatile food applications",
+      "applications": ["Bakery", "Snacks", "Fast Food"]
+    },
+    "glucoseSyrup": {
+      "title": "Glucose Syrup",
+      "description": "High-quality liquid sweetener with DE 45.9",
+      "applications": ["Confectionery", "Bakery", "Beverages"]
+    },
+    "margarineCream": {
+      "title": "Margarine Cream",
+      "description": "Versatile cream for bakery and pastry production",
+      "applications": ["Bakery", "Pastry", "Snacks"]
+    },
+    "supporting": {
+      "title": "Supporting Ingredients",
+      "description": "Complete range of food ingredients",
+      "applications": ["Milk Powder", "Maltodextrin", "Modified Starch"]
+    }
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Our commitment to quality from source to delivery",
+    "sourcing": {
+      "title": "Ingredient Sourcing",
+      "description": "Strict raw material selection with rigorous quality standards"
+    },
+    "processing": {
+      "title": "Controlled Processing",
+      "description": "Hygiene & sanitation SOP throughout production"
+    },
+    "delivery": {
+      "title": "Quality Control & Delivery",
+      "description": "Reliable delivery to clients with consistent quality assurance"
+    }
+  },
+  "cta": {
+    "title": "Let's Grow Together – Contact Our Team",
+    "subtitle": "Partner with us for reliable, high-quality food ingredients",
+    "getInTouch": "Get in Touch"
+  },
+  "about": {
+    "title": "About Us",
+    "description1": "PT Intiboga Pangan Jaya is an integrated supply service company providing high-quality ingredients for the food, beverage, and snack manufacturing industries in Indonesia.",
+    "description2": "Based in Bandung, West Java, the company is committed to supporting manufacturers with reliable, consistent, and safe raw materials that meet modern production standards.",
+    "coreSupply": "Core Supply Focus",
+    "supportingIngredients": "Supporting Ingredients",
+    "qualityStatement": "The company applies standardized processing systems and strict quality control to ensure every product meets premium quality requirements."
+  },
+  "vision": {
+    "title": "Vision",
+    "text": "To become a leading and trusted integrated food ingredient supplier in Indonesia and the ASEAN region, providing reliable, consistent, and innovative solutions for the food, beverage, and snack manufacturing industries."
+  },
+  "mission": {
+    "title": "Mission",
+    "items": [
+      "Providing safe, premium, and consistent food ingredients supported by strict quality standards and reliable supply chains.",
+      "Becoming a dependable partner for manufacturers by offering competitive pricing, responsive service, and comprehensive ingredient solutions.",
+      "Continuously expanding and improving the product portfolio to meet evolving market needs and support clients' R&D processes.",
+      "Maintaining strong, transparent, and mutually beneficial relationships with clients, suppliers, and stakeholders.",
+      "Ensuring ethical business practices, operational excellence, and commitment to delivering value in every aspect of service."
+    ]
+  },
+  "values": {
+    "title": "Our Core Values",
+    "subtitle": "The principles that guide our business operations",
+    "qualityFirst": {
+      "title": "Quality First",
+      "description": "Prioritizing product quality to meet and exceed customer expectations."
+    },
+    "integrity": {
+      "title": "Integrity",
+      "description": "Operating with honesty, transparency, and responsibility."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "Continuously improving processes and products."
+    },
+    "customerFocus": {
+      "title": "Customer Focus",
+      "description": "Collaborating closely with clients to provide tailored solutions."
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "description": "Committed to environmentally conscious practices and responsible resource use."
+    },
+    "teamwork": {
+      "title": "Team Work",
+      "description": "Believing collaboration and mutual support drive better results."
+    }
+  },
+  "productDetail": {
+    "title": "Our Products",
+    "subtitle": "High-quality ingredients for your manufacturing needs",
+    "keyFeatures": "Key Features:",
+    "applications": "Product Applications",
+    "applicationsSubtitle": "Versatile ingredients for diverse manufacturing needs",
+    "potatoFlakes": {
+      "title": "Potato Flakes",
+      "description": "Premium potato flakes made from carefully selected potatoes and processed using advanced, hygienic technology. Designed for ease of use, long shelf life, and consistent results.",
+      "features": [
+        "Excellent water absorption and rehydration",
+        "Natural potato taste and aroma",
+        "Free from artificial preservatives",
+        "Available in various flake textures"
+      ],
+      "applications": [
+        "Bakery fillings and dough conditioners",
+        "Snack production (chips, crackers)",
+        "Thickening agent for soups, sauces, and gravies",
+        "Coating and breading for frozen foods",
+        "Bread formulations for improved texture",
+        "Fast food preparations (mashed potato, coating blends)"
+      ]
+    },
+    "glucoseSyrup": {
+      "title": "Glucose Syrup",
+      "description": "High-quality liquid sweetener with DE 45.9, providing balance between mild sweetness, texture stability, and heat resistance.",
+      "features": [
+        "Prevents sugar crystallization",
+        "Enhances texture and viscosity",
+        "Improves moisture retention",
+        "Stable under high-heat processing",
+        "Suitable for confectionery, bakery, beverage, dairy, and snack applications"
+      ],
+      "applications": [
+        "Confectionery and candies",
+        "Bakery and pastry",
+        "Beverage industry",
+        "Dairy and ice cream",
+        "Snack and extruded foods",
+        "Sauces and sweet condiments"
+      ]
+    },
+    "margarineCream": {
+      "title": "Margarine Cream",
+      "description": "A versatile ingredient for bakery, pastry, and snack industries, providing a smooth, creamy texture with excellent stability.",
+      "features": [
+        "Suitable for spreading and filling applications",
+        "Ideal for use in both sweet and savory baked goods",
+        "Stable at high temperatures for production consistency",
+        "Excellent creaming and texture properties"
+      ],
+      "applications": [
+        "Bakery and pastry fillings",
+        "Cake and cookie production",
+        "Cream-filled snacks",
+        "Sweet and savory spreads",
+        "Laminated dough products"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "subtitle": "Why manufacturers choose PT Intiboga Pangan Jaya",
+    "consistentQuality": {
+      "title": "Consistent Quality",
+      "description": "Controlled production processes and high-grade raw materials"
+    },
+    "customSolutions": {
+      "title": "Custom Solutions",
+      "description": "Ability to tailor product specifications to client needs"
+    },
+    "localExpertise": {
+      "title": "Local Expertise",
+      "description": "Deep understanding of Indonesian and regional food markets"
+    },
+    "strategicLocation": {
+      "title": "Strategic Location",
+      "description": "Easy access to major distribution channels in Java"
+    },
+    "responsiveSupport": {
+      "title": "Responsive Support",
+      "description": "Dedicated technical and commercial assistance"
+    }
+  },
+  "clients": {
+    "title": "Our Clients & Partners",
+    "subtitle": "Serving diverse segments of the food industry",
+    "segments": {
+      "manufacturers": "Food manufacturers",
+      "bakery": "Bakery and pastry industries",
+      "snacks": "Snack and frozen food producers",
+      "horeca": "Horeca (Hotel, Restaurant, Catering)",
+      "distributors": "Local distributors and export clients"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's discuss how we can support your manufacturing needs",
+    "getInTouch": "Get in Touch",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "businessHours": "Business Hours",
+    "hours": {
+      "weekday": "Monday - Friday: 8:00 AM - 5:00 PM",
+      "saturday": "Saturday: 8:00 AM - 12:00 PM",
+      "sunday": "Sunday: Closed"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+62 xxx xxxx xxxx",
+      "company": "Company Name",
+      "companyPlaceholder": "Your company name",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your needs...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Thank You!",
+        "message": "Your message has been sent successfully. We'll get back to you soon.",
+        "sendAnother": "Send Another Message"
+      }
+    }
+  },
+  "clientSegments": {
+    "title": "Our Clients & Partners",
+    "subtitle": "Serving diverse segments of the food industry",
+    "item1": "Food manufacturers",
+    "item2": "Bakery and pastry industries",
+    "item3": "Snack and frozen food producers",
+    "item4": "Horeca (Hotel, Restaurant, Catering)",
+    "item5": "Local distributors and export clients"
+  },
+  "footer": {
+    "description": "Integrated Supply Service for High-Quality Food Ingredients",
+    "quickLinks": "Quick Links",
+    "products": "Products",
+    "contactUs": "Contact Us",
+    "copyright": "All rights reserved"
+  },
+  "companyStats": {
+    "established": "Established",
+    "establishedValue": "2020+",
+    "location": "Location",
+    "locationValue": "Bandung",
+    "reach": "Reach",
+    "reachValue": "Indonesia",
+    "focus": "Focus",
+    "focusValue": "B2B",
+    "tagline": "About PT Intiboga Pangan Jaya",
+    "heroTitle": "Integrated Supply Service",
+    "heroSubtitle": "Providing high-quality ingredients for the food, beverage, and snack manufacturing industries in Indonesia",
+    "description": "is an integrated supply service company based in",
+    "location2": "Bandung, West Java",
+    "commitment": "committed to supporting manufacturers with reliable, consistent, and safe raw materials that meet modern production standards.",
+    "coreProducts": "Core Products",
+    "supportingIngredients2": "Supporting Ingredients",
+    "qualityHighlight": "Quality is our priority.",
+    "qualityDescription": "We apply standardized processing systems and strict quality control to ensure every product meets",
+    "premiumQuality": "premium quality requirements",
+    "forSuccess": "for your manufacturing success."
+  },
+  "visionMissionSection": {
+    "title": "Vision & Mission",
+    "subtitle": "Our guiding principles for excellence and growth",
+    "visionTitle": "Our Vision",
+    "missionTitle": "Our Mission"
+  },
+  "valuesSection": {
+    "subtitle2": "The principles that guide our business operations and relationships"
+  },
+  "productGrid": {
+    "clickToSee": "Click to see details",
+    "description": "Description",
+    "keyFeatures": "Key Features",
+    "mainIngredients": "Main Ingredients",
+    "applications": "Applications"
+  },
+  "infiniteScroll": {
+    "title": "Our Product Range",
+    "subtitle": "Comprehensive food ingredient solutions for every manufacturing need"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "required": "Required"
+  }
+}

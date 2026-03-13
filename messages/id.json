@@ -1,0 +1,317 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "products": "Produk",
+    "advantages": "Keunggulan",
+    "contact": "Kontak",
+    "getQuote": "Dapatkan Penawaran"
+  },
+  "hero": {
+    "title": "Integrated Supply Service untuk Bahan Makanan Berkualitas Tinggi",
+    "subtitle": "Layanan Pasokan Terintegrasi dengan Komitmen Mendukung Bisnis Anda",
+    "contactUs": "Hubungi Kami",
+    "inquireProducts": "Tanyakan Produk",
+    "premiumQuality": "Kualitas Premium",
+    "certifiedSafe": "Bahan Bersertifikat & Aman",
+    "sustainable": "Berkelanjutan",
+    "ecoFriendly": "Sumber Ramah Lingkungan"
+  },
+  "metrics": {
+    "quality": "Pemasok bahan makanan berkualitas tinggi di Indonesia",
+    "location": "Lokasi strategis di Jawa Barat",
+    "standards": "Kontrol kualitas & standar kebersihan yang ketat",
+    "supply": "Rantai pasokan yang andal dan konsisten"
+  },
+  "products": {
+    "title": "Produk Utama Kami",
+    "subtitle": "Bahan berkualitas tinggi untuk kebutuhan manufaktur Anda",
+    "viewAll": "Lihat Semua Produk",
+    "potatoFlakes": {
+      "title": "Potato Flakes",
+      "description": "Serpihan kentang premium untuk aplikasi makanan yang beragam",
+      "applications": ["Roti & Kue", "Snack", "Makanan Cepat Saji"]
+    },
+    "glucoseSyrup": {
+      "title": "Sirup Glukosa",
+      "description": "Pemanis cair berkualitas tinggi dengan DE 45.9",
+      "applications": ["Permen", "Roti & Kue", "Minuman"]
+    },
+    "margarineCream": {
+      "title": "Krim Margarin",
+      "description": "Krim serbaguna untuk produksi roti dan kue",
+      "applications": ["Roti & Kue", "Pastry", "Snack"]
+    },
+    "supporting": {
+      "title": "Bahan Pendukung",
+      "description": "Rangkaian lengkap bahan makanan",
+      "applications": ["Susu Bubuk", "Maltodextrin", "Pati Modifikasi"]
+    }
+  },
+  "howWeWork": {
+    "title": "Cara Kami Bekerja",
+    "subtitle": "Komitmen kami terhadap kualitas dari sumber hingga pengiriman",
+    "sourcing": {
+      "title": "Pengadaan Bahan Baku",
+      "description": "Seleksi bahan baku yang ketat dengan standar kualitas tinggi"
+    },
+    "processing": {
+      "title": "Pemrosesan Terkontrol",
+      "description": "SOP kebersihan & sanitasi sepanjang produksi"
+    },
+    "delivery": {
+      "title": "Kontrol Kualitas & Pengiriman",
+      "description": "Pengiriman andal ke klien dengan jaminan kualitas yang konsisten"
+    }
+  },
+  "cta": {
+    "title": "Mari Berkembang Bersama – Hubungi Tim Kami",
+    "subtitle": "Bermitra dengan kami untuk bahan makanan berkualitas tinggi yang andal",
+    "getInTouch": "Hubungi Kami"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "description1": "PT Intiboga Pangan Jaya adalah perusahaan layanan pasokan terintegrasi yang menyediakan bahan berkualitas tinggi untuk industri manufaktur makanan, minuman, dan snack di Indonesia.",
+    "description2": "Berlokasi di Bandung, Jawa Barat, perusahaan berkomitmen mendukung produsen dengan bahan baku yang andal, konsisten, dan aman yang memenuhi standar produksi modern.",
+    "coreSupply": "Fokus Pasokan Utama",
+    "supportingIngredients": "Bahan Pendukung",
+    "qualityStatement": "Perusahaan menerapkan sistem pemrosesan yang terstandarisasi dan kontrol kualitas yang ketat untuk memastikan setiap produk memenuhi persyaratan kualitas premium."
+  },
+  "vision": {
+    "title": "Visi",
+    "text": "Menjadi pemasok bahan makanan terintegrasi yang terkemuka dan terpercaya di Indonesia dan kawasan ASEAN, menyediakan solusi yang handal, konsisten, dan inovatif untuk industri manufaktur makanan, minuman, dan snack."
+  },
+  "mission": {
+    "title": "Misi",
+    "items": [
+      "Menyediakan bahan makanan yang aman, premium, dan konsisten didukung oleh standar kualitas yang ketat dan rantai pasokan yang andal.",
+      "Menjadi mitra yang dapat diandalkan bagi produsen dengan menawarkan harga yang kompetitif, layanan responsif, dan solusi bahan yang komprehensif.",
+      "Terus memperluas dan meningkatkan portofolio produk untuk memenuhi kebutuhan pasar yang berkembang dan mendukung proses R&D klien.",
+      "Memelihara hubungan yang kuat, transparan, dan saling menguntungkan dengan klien, pemasok, dan pemangku kepentingan.",
+      "Memastikan praktik bisnis yang etis, keunggulan operasional, dan komitmen untuk memberikan nilai dalam setiap aspek layanan."
+    ]
+  },
+  "values": {
+    "title": "Nilai-Nilai Inti Kami",
+    "subtitle": "Prinsip yang memandu operasi bisnis kami",
+    "qualityFirst": {
+      "title": "Kualitas Utama",
+      "description": "Memprioritaskan kualitas produk untuk memenuhi dan melampaui harapan pelanggan."
+    },
+    "integrity": {
+      "title": "Integritas",
+      "description": "Beroperasi dengan kejujuran, transparansi, dan tanggung jawab."
+    },
+    "innovation": {
+      "title": "Inovasi",
+      "description": "Terus meningkatkan proses dan produk."
+    },
+    "customerFocus": {
+      "title": "Fokus Pelanggan",
+      "description": "Berkolaborasi erat dengan klien untuk memberikan solusi yang disesuaikan."
+    },
+    "sustainability": {
+      "title": "Keberlanjutan",
+      "description": "Berkomitmen pada praktik yang sadar lingkungan dan penggunaan sumber daya yang bertanggung jawab."
+    },
+    "teamwork": {
+      "title": "Kerja Sama Tim",
+      "description": "Percaya kolaborasi dan saling mendukung menghasilkan hasil yang lebih baik."
+    }
+  },
+  "productDetail": {
+    "title": "Produk Kami",
+    "subtitle": "Bahan berkualitas tinggi untuk kebutuhan manufaktur Anda",
+    "keyFeatures": "Fitur Utama:",
+    "applications": "Aplikasi Produk",
+    "applicationsSubtitle": "Bahan serbaguna untuk berbagai kebutuhan manufaktur",
+    "potatoFlakes": {
+      "title": "Potato Flakes",
+      "description": "Serpihan kentang premium yang terbuat dari kentang pilihan dan diproses menggunakan teknologi canggih dan higienis. Dirancang untuk kemudahan penggunaan, umur simpan yang panjang, dan hasil yang konsisten.",
+      "features": [
+        "Penyerapan air dan rehidrasi yang sangat baik",
+        "Rasa dan aroma kentang alami",
+        "Bebas dari pengawet buatan",
+        "Tersedia dalam berbagai tekstur serpihan"
+      ],
+      "applications": [
+        "Isian roti dan kondisioner adonan",
+        "Produksi snack (keripik, kerupuk)",
+        "Agen pengental untuk sup, saus, dan kuah",
+        "Pelapis dan breading untuk makanan beku",
+        "Formulasi roti untuk tekstur yang lebih baik",
+        "Persiapan makanan cepat saji (kentang tumbuk, campuran pelapis)"
+      ]
+    },
+    "glucoseSyrup": {
+      "title": "Sirup Glukosa",
+      "description": "Pemanis cair berkualitas tinggi dengan DE 45.9, memberikan keseimbangan antara rasa manis yang lembut, stabilitas tekstur, dan ketahanan panas.",
+      "features": [
+        "Mencegah kristalisasi gula",
+        "Meningkatkan tekstur dan viskositas",
+        "Meningkatkan retensi kelembaban",
+        "Stabil di bawah pemrosesan suhu tinggi",
+        "Cocok untuk aplikasi permen, roti, minuman, susu, dan snack"
+      ],
+      "applications": [
+        "Permen dan gula-gula",
+        "Roti dan kue",
+        "Industri minuman",
+        "Susu dan es krim",
+        "Snack dan makanan ekstrusi",
+        "Saus dan bumbu manis"
+      ]
+    },
+    "margarineCream": {
+      "title": "Krim Margarin",
+      "description": "Bahan serbaguna untuk industri roti, kue, dan snack, memberikan tekstur lembut dan krim dengan stabilitas yang sangat baik.",
+      "features": [
+        "Cocok untuk aplikasi oles dan isian",
+        "Ideal untuk makanan panggang manis dan gurih",
+        "Stabil pada suhu tinggi untuk konsistensi produksi",
+        "Sifat krim dan tekstur yang sangat baik"
+      ],
+      "applications": [
+        "Isian roti dan kue",
+        "Produksi kue dan biskuit",
+        "Snack berisi krim",
+        "Olesan manis dan gurih",
+        "Produk adonan berlapis"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "Keunggulan Kami",
+    "subtitle": "Mengapa produsen memilih PT Intiboga Pangan Jaya",
+    "consistentQuality": {
+      "title": "Kualitas Konsisten",
+      "description": "Proses produksi terkontrol dan bahan baku bermutu tinggi"
+    },
+    "customSolutions": {
+      "title": "Solusi Kustom",
+      "description": "Kemampuan untuk menyesuaikan spesifikasi produk dengan kebutuhan klien"
+    },
+    "localExpertise": {
+      "title": "Keahlian Lokal",
+      "description": "Pemahaman mendalam tentang pasar makanan Indonesia dan regional"
+    },
+    "strategicLocation": {
+      "title": "Lokasi Strategis",
+      "description": "Akses mudah ke saluran distribusi utama di Jawa"
+    },
+    "responsiveSupport": {
+      "title": "Dukungan Responsif",
+      "description": "Bantuan teknis dan komersial yang berdedikasi"
+    }
+  },
+  "clients": {
+    "title": "Klien & Mitra Kami",
+    "subtitle": "Melayani segmen industri makanan yang beragam",
+    "segments": {
+      "manufacturers": "Produsen makanan",
+      "bakery": "Industri roti dan kue",
+      "snacks": "Produsen snack dan makanan beku",
+      "horeca": "Horeca (Hotel, Restoran, Katering)",
+      "distributors": "Distributor lokal dan klien ekspor"
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Mari diskusikan bagaimana kami dapat mendukung kebutuhan manufaktur Anda",
+    "getInTouch": "Hubungi Kami",
+    "address": "Alamat",
+    "phone": "Telepon",
+    "email": "Email",
+    "businessHours": "Jam Operasional",
+    "hours": {
+      "weekday": "Senin - Jumat: 08:00 - 17:00",
+      "saturday": "Sabtu: 08:00 - 12:00",
+      "sunday": "Minggu: Tutup"
+    },
+    "form": {
+      "title": "Kirim Pesan",
+      "name": "Nama",
+      "namePlaceholder": "Nama Anda",
+      "email": "Email",
+      "emailPlaceholder": "email@anda.com",
+      "phone": "Telepon",
+      "phonePlaceholder": "+62 xxx xxxx xxxx",
+      "company": "Nama Perusahaan",
+      "companyPlaceholder": "Nama perusahaan Anda",
+      "message": "Pesan",
+      "messagePlaceholder": "Ceritakan tentang kebutuhan Anda...",
+      "submit": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success": {
+        "title": "Terima Kasih!",
+        "message": "Pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda.",
+        "sendAnother": "Kirim Pesan Lain"
+      }
+    }
+  },
+  "clientSegments": {
+    "title": "Klien & Mitra Kami",
+    "subtitle": "Melayani berbagai segmen industri makanan",
+    "item1": "Produsen makanan",
+    "item2": "Industri bakery dan pastry",
+    "item3": "Produsen snack dan makanan beku",
+    "item4": "Horeca (Hotel, Restoran, Katering)",
+    "item5": "Distributor lokal dan klien ekspor"
+  },
+  "footer": {
+    "description": "Integrated Supply Service untuk Bahan Makanan Berkualitas Tinggi",
+    "quickLinks": "Tautan Cepat",
+    "products": "Produk",
+    "contactUs": "Hubungi Kami",
+    "copyright": "Hak Cipta Dilindungi"
+  },
+  "companyStats": {
+    "established": "Didirikan",
+    "establishedValue": "2020+",
+    "location": "Lokasi",
+    "locationValue": "Bandung",
+    "reach": "Jangkauan",
+    "reachValue": "Indonesia",
+    "focus": "Fokus",
+    "focusValue": "B2B",
+    "tagline": "Tentang PT Intiboga Pangan Jaya",
+    "heroTitle": "Layanan Pasokan Terintegrasi",
+    "heroSubtitle": "Menyediakan bahan berkualitas tinggi untuk industri manufaktur makanan, minuman, dan snack di Indonesia",
+    "description": "adalah perusahaan layanan pasokan terintegrasi yang berbasis di",
+    "location2": "Bandung, Jawa Barat",
+    "commitment": "berkomitmen mendukung produsen dengan bahan baku yang andal, konsisten, dan aman yang memenuhi standar produksi modern.",
+    "coreProducts": "Produk Utama",
+    "supportingIngredients2": "Bahan Pendukung",
+    "qualityHighlight": "Kualitas adalah prioritas kami.",
+    "qualityDescription": "Kami menerapkan sistem pemrosesan yang terstandarisasi dan kontrol kualitas yang ketat untuk memastikan setiap produk memenuhi",
+    "premiumQuality": "persyaratan kualitas premium",
+    "forSuccess": "untuk kesuksesan manufaktur Anda."
+  },
+  "visionMissionSection": {
+    "title": "Visi & Misi",
+    "subtitle": "Prinsip panduan kami untuk keunggulan dan pertumbuhan",
+    "visionTitle": "Visi Kami",
+    "missionTitle": "Misi Kami"
+  },
+  "valuesSection": {
+    "subtitle2": "Prinsip yang memandu operasi bisnis dan hubungan kami"
+  },
+  "productGrid": {
+    "clickToSee": "Klik untuk melihat detail",
+    "description": "Deskripsi",
+    "keyFeatures": "Fitur Utama",
+    "mainIngredients": "Bahan Utama",
+    "applications": "Aplikasi"
+  },
+  "infiniteScroll": {
+    "title": "Jangkauan Produk Kami",
+    "subtitle": "Solusi bahan makanan komprehensif untuk setiap kebutuhan manufaktur"
+  },
+  "common": {
+    "readMore": "Baca Selengkapnya",
+    "learnMore": "Pelajari Lebih Lanjut",
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "required": "Wajib diisi"
+  }
+}

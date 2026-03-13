@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules
+
+# Misc
+.DS_Store
+*.pem
+
+# Local env files
+.env
+.env.local
+.env.production
+
+# Sanity
+dist
+.sanity
