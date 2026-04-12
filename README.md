@@ -52,7 +52,7 @@ Setiap inquiry yang masuk otomatis **tersimpan ke database** dan mengirim **emai
 
 ### 📝 Edit Konten Tanpa Coding
 
-Semua teks dan gambar di website bisa diedit lewat **Sanity Studio** (CMS). Tim non-teknis bisa update konten kapan saja, langsung live.
+Semua teks dan gambar di website bisa diedit lewat **Custom Admin Dashboard** terintegrasi. Tim non-teknis bisa update konten melalui antarmuka yang user-friendly kapan saja.
 
 </td>
 <td>
@@ -92,6 +92,7 @@ Dilengkapi **meta tags**, **OpenGraph** untuk social sharing, **sitemap.xml**, d
 | 📦 **Products**   | Katalog produk lengkap dengan detail & aplikasi penggunaan                     |
 | 🏆 **Advantages** | Keunggulan perusahaan & segmen klien yang dilayani                             |
 | 📞 **Contact**    | Informasi kontak + form inquiry yang fungsional                                |
+| 🔒 **Admin**      | Login otentikasi & dashboard internal manajemen konten website                 |
 
 ---
 
@@ -119,6 +120,7 @@ Dilengkapi **meta tags**, **OpenGraph** untuk social sharing, **sitemap.xml**, d
 
 - **Supabase** (PostgreSQL DB)
 - **Drizzle ORM** (Type-safe queries)
+- **Custom Admin Dashboard**
 - **Sanity.io** (Headless CMS)
 - **Resend** (Email service)
 - **Zod** (Validation)
@@ -149,6 +151,7 @@ websiteIPJ/
 │   │   ├── products/             # Products
 │   │   ├── advantages/           # Advantages
 │   │   └── contact/              # Contact
+│   ├── admin/                    # Halaman Auth & Custom Admin Dashboard
 │   └── api/contact/              # API endpoint form kontak
 │
 ├── 📂 components/                # Komponen React
@@ -186,7 +189,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Buka [http://localhost:3000](http://localhost:3000) dan website siap! 🎉
+Buka [http://localhost:3001](http://localhost:3001) dan website siap! 🎉
 
 > 📖 Butuh panduan lebih detail? Baca [docs/QUICKSTART.md](docs/QUICKSTART.md) (English) atau [docs/PANDUAN_SETUP_LENGKAP.md](docs/PANDUAN_SETUP_LENGKAP.md) (Bahasa Indonesia)
 
@@ -209,7 +212,7 @@ Pengunjung tinggal klik tombol 🌐 di navigation bar untuk ganti bahasa. URL la
 
 ## 📝 Content Management (CMS)
 
-Semua konten website bisa diedit lewat **Sanity Studio** tanpa perlu coding:
+Semua konten website bisa diedit dengan mudah lewat **Custom Admin Dashboard** (akses `/admin`) tanpa perlu coding:
 
 | Konten               | Yang Bisa Diedit                           |
 | -------------------- | ------------------------------------------ |

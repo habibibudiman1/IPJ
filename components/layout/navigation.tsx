@@ -1,80 +1,160 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X, Search } from "lucide-react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations, useLocale } from "next-intl";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import { Button } from "@/components/ui/button";
+
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Products", href: "#products" },
+  { name: "Applications", href: "#applications" },
+  { name: "Why Us", href: "#whyus" },
+  { name: "Contact", href: "#contact" },
+];
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const t = useTranslations("nav");
-  const locale = useLocale();
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  const navItems = [
-    { name: t("home"), href: `/${locale}` },
-    { name: t("about"), href: `/${locale}/about` },
-    { name: t("products"), href: `/${locale}/products` },
-    { name: t("advantages"), href: `/${locale}/advantages` },
-    { name: t("contact"), href: `/${locale}/contact` },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+
+      // Track active section
+      const sections = navItems.map((item) => item.href.replace("#", ""));
+      for (const section of [...sections].reverse()) {
+        const el = document.getElementById(section);
+        if (el && window.scrollY >= el.offsetTop - 120) {
+          setActiveSection(section);
+          break;
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-dark-section shadow-lg">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? "py-3" : "py-5"
+      }`}
+    >
+      {/* Backdrop */}
+      <div
+        className={`absolute inset-0 transition-all duration-500 ${
+          scrolled
+            ? "bg-brand-green-dark/95 backdrop-blur-xl shadow-2xl shadow-black/20"
+            : "bg-gradient-to-b from-black/30 to-transparent"
+        }`}
+      />
+
+      <div className="relative container mx-auto flex items-center justify-between px-4 lg:px-8">
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-3">
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center">
-              <span className="text-white font-bold text-sm">IPJ</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-sm font-bold text-white leading-none block">
-                PT INTIBOGA
-              </span>
-              <span className="text-xs font-semibold text-primary leading-none block">
-                PANGAN JAYA
-              </span>
-            </div>
+        <Link href="/" className="flex items-center gap-3 group z-10">
+          <div className="relative w-10 h-10 transition-all duration-300 group-hover:scale-105">
+            <Image
+              src="/images/logoIPJ.png"
+              alt="IPJ Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="hidden sm:flex flex-col">
+            <span className="text-xs font-bold text-white tracking-[0.2em] font-body leading-none">
+              INTIBOGA
+            </span>
+            <span className="text-[10px] font-medium text-brand-saffron tracking-[0.15em] font-body leading-none mt-0.5">
+              PANGAN JAYA
+            </span>
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:items-center lg:gap-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="px-4 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-primary rounded-md"
-            >
-              {item.name}
-            </Link>
-          ))}
+        {/* Desktop Navigation — Pill style */}
+        <div className="hidden lg:flex items-center">
+          <div
+            className={`flex items-center gap-1 px-2 py-1.5 rounded-full border transition-all duration-500 ${
+              scrolled
+                ? "border-white/10 bg-white/5"
+                : "border-white/20 bg-white/10 backdrop-blur-sm"
+            }`}
+          >
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.replace("#", "");
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="relative px-4 py-1.5 text-sm font-medium font-body transition-colors duration-200 rounded-full"
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-pill"
+                      className="absolute inset-0 bg-brand-saffron rounded-full"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                  <span
+                    className={`relative z-10 transition-colors duration-200 ${
+                      isActive ? "text-white" : "text-white/70 hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Right Side */}
-        <div className="hidden lg:flex lg:items-center lg:gap-3">
+        {/* Actions Desktop */}
+        <div className="hidden lg:flex lg:items-center lg:gap-3 z-10">
           <LanguageSwitcher />
-          <Button
-            asChild
-            size="sm"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-5 rounded-md"
+          <a
+            href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
+            className="inline-flex items-center gap-2 px-5 py-2 bg-white text-brand-green font-semibold text-sm rounded-full hover:bg-brand-cream transition-all duration-300 hover:shadow-lg font-body"
           >
-            <Link href={`/${locale}/contact`}>
-              {t("quote") ?? "REQUEST QUOTE"}
-            </Link>
-          </Button>
+            Get In Touch
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden relative z-10 text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <AnimatePresence mode="wait">
+            {mobileMenuOpen ? (
+              <motion.div key="close" initial={{ rotate: -90 }} animate={{ rotate: 0 }} exit={{ rotate: 90 }}>
+                <X size={22} />
+              </motion.div>
+            ) : (
+              <motion.div key="open" initial={{ rotate: 90 }} animate={{ rotate: 0 }} exit={{ rotate: -90 }}>
+                <Menu size={22} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </button>
       </div>
 
@@ -82,36 +162,36 @@ export function Navigation() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-white/10"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden absolute top-full left-4 right-4 mt-2 bg-brand-green-dark/98 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden shadow-2xl"
           >
-            <div className="container mx-auto px-4 py-4 space-y-1">
-              {navItems.map((item) => (
-                <Link
+            <div className="p-3 space-y-1">
+              {navItems.map((item, index) => (
+                <motion.a
                   key={item.name}
                   href={item.href}
-                  className="block py-3 px-3 text-sm font-medium text-gray-200 hover:text-primary hover:bg-white/5 rounded-md"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.04 }}
+                  className="flex items-center gap-3 py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-xl transition-all font-body"
                 >
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-saffron/50" />
                   {item.name}
-                </Link>
+                </motion.a>
               ))}
-              <div className="flex items-center gap-3 pt-3 border-t border-white/10">
+              <div className="pt-3 pb-1 border-t border-white/10 flex flex-col gap-2 px-1">
                 <LanguageSwitcher />
-                <Button
-                  asChild
-                  size="sm"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold flex-1"
+                <a
+                  href="#contact"
+                  onClick={(e) => handleNavClick(e, "#contact")}
+                  className="block w-full text-center py-2.5 bg-brand-saffron text-white font-semibold text-sm rounded-xl hover:bg-brand-saffron/90 transition-all font-body"
                 >
-                  <Link
-                    href={`/${locale}/contact`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {t("getQuote") ?? "REQUEST QUOTE"}
-                  </Link>
-                </Button>
+                  Get In Touch
+                </a>
               </div>
             </div>
           </motion.div>
