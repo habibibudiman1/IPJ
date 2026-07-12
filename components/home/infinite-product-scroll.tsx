@@ -82,8 +82,8 @@ export function InfiniteProductScroll() {
 
       {/* Infinite Scroll Container */}
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-muted/30 to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-muted/30 to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-muted/30 to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-muted/30 to-transparent z-10" />
 
         <motion.div
           className="flex gap-6"
@@ -102,13 +102,13 @@ export function InfiniteProductScroll() {
             return (
               <Card
                 key={index}
-                className="flex-shrink-0 w-[280px] overflow-hidden border-2 hover:border-secondary/50 transition-all duration-300 hover:shadow-xl group"
+                className="shrink-0 w-[280px] overflow-hidden border-2 hover:border-secondary/50 transition-all duration-300 hover:shadow-xl group"
               >
                 <div
-                  className={`relative h-36 bg-gradient-to-br ${product.gradient} p-6 flex items-center justify-center`}
+                  className={`relative h-36 bg-linear-to-br ${product.gradient} p-6 flex items-center justify-center`}
                 >
                   <div className="absolute inset-0 bg-black/5"></div>
-                  <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="relative bg-white/90 backdrop-blur-xs rounded-xl p-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Icon
                       className="w-12 h-12 text-secondary"
                       strokeWidth={1.5}
@@ -127,7 +127,7 @@ export function InfiniteProductScroll() {
 
                 <CardContent className="pt-0 pb-4">
                   <div className="flex items-center justify-center">
-                    <div className="h-1 w-12 bg-gradient-to-r from-secondary via-primary to-secondary rounded-full"></div>
+                    <div className="h-1 w-12 bg-linear-to-r from-secondary via-primary to-secondary rounded-full"></div>
                   </div>
                 </CardContent>
               </Card>
@@ -138,8 +138,8 @@ export function InfiniteProductScroll() {
 
       {/* Second Row */}
       <div className="relative mt-6">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-muted/30 to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-muted/30 to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-muted/30 to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-muted/30 to-transparent z-10" />
 
         <motion.div
           className="flex gap-6"
@@ -158,13 +158,13 @@ export function InfiniteProductScroll() {
             return (
               <Card
                 key={`reverse-${index}`}
-                className="flex-shrink-0 w-[280px] overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group"
+                className="shrink-0 w-[280px] overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group"
               >
                 <div
-                  className={`relative h-36 bg-gradient-to-br ${product.gradient} p-6 flex items-center justify-center`}
+                  className={`relative h-36 bg-linear-to-br ${product.gradient} p-6 flex items-center justify-center`}
                 >
                   <div className="absolute inset-0 bg-black/5"></div>
-                  <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="relative bg-white/90 backdrop-blur-xs rounded-xl p-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Icon
                       className="w-12 h-12 text-primary"
                       strokeWidth={1.5}
@@ -183,7 +183,7 @@ export function InfiniteProductScroll() {
 
                 <CardContent className="pt-0 pb-4">
                   <div className="flex items-center justify-center">
-                    <div className="h-1 w-12 bg-gradient-to-r from-primary via-secondary to-primary rounded-full"></div>
+                    <div className="h-1 w-12 bg-linear-to-r from-primary via-secondary to-primary rounded-full"></div>
                   </div>
                 </CardContent>
               </Card>

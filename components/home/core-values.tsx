@@ -1,114 +1,89 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Lightbulb, Shield, Leaf, Heart, Users, Handshake } from "lucide-react";
+import Image from "next/image";
 import { useScrollReveal } from "@/lib/useScrollReveal";
+import { useTranslations } from "next-intl";
 
 const defaultValues = [
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    description: "Continuously seeking new and better solutions",
-    color: "from-amber-500 to-orange-500",
-  },
-  {
-    icon: Shield,
-    title: "Quality First",
-    description: "Ensuring the highest standards in every product",
-    color: "from-brand-green to-emerald-600",
-  },
-  {
-    icon: Leaf,
-    title: "Sustainability",
-    description: "Committed to environmentally responsible practices",
-    color: "from-green-500 to-teal-500",
-  },
-  {
-    icon: Heart,
-    title: "Integrity",
-    description: "Conducting business with honesty and transparency",
-    color: "from-rose-500 to-pink-500",
-  },
-  {
-    icon: Users,
-    title: "Customer Focus",
-    description: "Prioritizing client satisfaction and needs",
-    color: "from-blue-500 to-indigo-500",
-  },
-  {
-    icon: Handshake,
-    title: "Team Work",
-    description: "Collaborating to achieve shared goals",
-    color: "from-purple-500 to-violet-500",
-  },
+  { key: "innovation", image: "/images/cv-innovation.png" },
+  { key: "qualityFirst", image: "/images/cv-quality.png" },
+  { key: "sustainability", image: "/images/cv-sustainability.png" },
+  { key: "integrity", image: "/images/cv-integrity.png" },
+  { key: "customerFocus", image: "/images/cv-customer.png" },
+  { key: "teamwork", image: "/images/cv-teamwork.png" },
 ];
 
 export function CoreValues() {
   const { ref, isVisible } = useScrollReveal();
-  const [values, setValues] = useState(defaultValues);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("ipj_core_values");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      // Map stored text data to the default icons and colors
-      setValues(defaultValues.map((def, i) => ({
-        ...def,
-        title: parsed[i]?.title || def.title,
-        description: parsed[i]?.description || def.description,
-      })));
-    }
-  }, []);
+  const t = useTranslations("values");
+  const values = defaultValues;
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="container mx-auto px-4 lg:px-8" ref={ref}>
-        <div className="max-w-6xl mx-auto">
+    <section className="py-24 lg:py-32 bg-white relative overflow-hidden" ref={ref}>
+
+      {/* Subtle organic background vector accent */}
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-brand-cream/20 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative">
+        <div className="w-full mx-auto">
+
           {/* Section Header */}
           <div
-            className={`text-center mb-14 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            className={`text-center mb-20 transition-all duration-1000 ease-out ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <span className="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-sm font-semibold rounded-full mb-4 font-body tracking-wide">
+            <span className="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-full mb-4 font-body tracking-wider uppercase">
               Our Foundation
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-green mb-4 font-heading">
-              Core Values
+            <h2
+              className="font-display text-brand-green mb-4 leading-none"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
+            >
+              {t("title")}
             </h2>
-            <p className="text-gray-500 font-body max-w-2xl mx-auto">
-              The principles that guide every aspect of our business
+            <p className="text-brand-stone font-body max-w-xl mx-auto text-base leading-relaxed">
+              {t("subtitle")}
             </p>
           </div>
 
           {/* Values Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value, i) => (
-              <div
-                key={i}
-                className={`group relative bg-white rounded-2xl p-7 border border-gray-100 hover:border-brand-green/20 hover:shadow-xl transition-all duration-500 cursor-default ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-                style={{ transitionDelay: `${i * 0.1}s` }}
-              >
-                {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <value.icon className="w-7 h-7 text-white" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-6 justify-center">
+            {values.map((value, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`flex flex-col items-center text-center transition-all duration-1000 ease-out ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
+                  style={{ transitionDelay: `${i * 0.12}s` }}
+                >
+                  {/* Image container - tall vertical box to fit standing characters */}
+                  <div className="relative w-full h-[240px] md:h-[280px] lg:h-[320px] mb-5 overflow-hidden bg-white flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src={value.image}
+                      alt={t(`${value.key}.title`)}
+                      fill
+                      className="object-contain p-0 scale-[1.35]"
+                      sizes="(max-width: 768px) 200px, (max-width: 1024px) 260px, 300px"
+                      priority={i < 3}
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-base md:text-lg font-bold text-brand-green mb-2 font-display">
+                    {t(`${value.key}.title`)}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs text-brand-stone font-body leading-relaxed max-w-[180px] md:max-w-none">
+                    {t(`${value.key}.description`)}
+                  </p>
                 </div>
-
-                {/* Content */}
-                <h3 className="text-lg font-bold text-brand-green mb-2 font-heading">
-                  {value.title}
-                </h3>
-                <p className="text-sm text-gray-500 font-body leading-relaxed">
-                  {value.description}
-                </p>
-
-                {/* Hover accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-green to-brand-saffron rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            ))}
+              );
+            })}
           </div>
+
         </div>
       </div>
     </section>

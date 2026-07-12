@@ -1,45 +1,36 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { MapPin, Factory, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/lib/useScrollReveal";
+import { COMPANY_CONFIG } from "@/config/company";
+import { useTranslations } from "next-intl";
 
 export function AboutSection() {
   const { ref, isVisible } = useScrollReveal();
-
-  const [content, setContent] = useState({
-    description:
-      "PT. Intiboga Pangan Jaya is a trusted supplier of food ingredients, operating from Surabaya, East Java, Indonesia. We are committed to supporting our clients across various food industries by providing high-quality ingredients, including Potato Flakes, Glucose Syrup, and other essential materials.",
-    stats: {
-      location: "Surabaya, East Java",
-      industry: "Food Ingredients Supplier",
-      focus: "B2B / Industrial Supply",
-    },
-  });
-
-  useEffect(() => {
-    const saved = localStorage.getItem("ipj_about");
-    if (saved) {
-      const data = JSON.parse(saved);
-      setContent({
-        description: data.description || content.description,
-        stats: data.stats || content.stats,
-      });
-    }
-  }, []);
+  const t = useTranslations("about");
+  const tStats = useTranslations("companyStats");
 
   const statsList = [
-    { icon: MapPin, label: "Location", value: content.stats.location },
-    { icon: Factory, label: "Industry", value: content.stats.industry },
-    { icon: Award, label: "Focus", value: content.stats.focus },
+    { 
+      icon: MapPin, 
+      label: tStats("location"), 
+      value: `${COMPANY_CONFIG.address.city}, ${COMPANY_CONFIG.address.province}` 
+    },
+    { 
+      icon: Factory, 
+      label: tStats("focus"), 
+      value: tStats("focusValue") 
+    },
+    { 
+      icon: Award, 
+      label: tStats("reach"), 
+      value: tStats("reachValue") 
+    },
   ];
 
-  const firstSentence = content.description.split(".")[0] + ".";
-  const rest = content.description.substring(content.description.indexOf(".") + 1).trim();
-
   return (
-    <section id="about" className="relative py-24 lg:py-36 bg-brand-offwhite overflow-hidden">
+    <section id="about" className="relative py-24 lg:py-36 bg-white overflow-hidden">
 
       {/* Large decorative "01" background number */}
       <div
@@ -47,7 +38,7 @@ export function AboutSection() {
         aria-hidden
       >
         <span
-          className="font-display font-bold text-brand-green/[0.04] leading-none"
+          className="font-display font-bold text-brand-green/4 leading-none"
           style={{ fontSize: "clamp(14rem, 25vw, 22rem)" }}
         >
           01
@@ -66,7 +57,7 @@ export function AboutSection() {
           >
             <div className="w-8 h-px bg-brand-saffron" />
             <span className="text-brand-stone text-xs font-semibold tracking-[0.25em] uppercase font-body">
-              About Us
+              {t("title")}
             </span>
           </motion.div>
 
@@ -82,15 +73,14 @@ export function AboutSection() {
                 className="font-display text-brand-green leading-[1.05] mb-6"
                 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
               >
-                Who We{" "}
-                <span className="italic text-brand-saffron">Are</span>
+                Who We <span className="italic text-brand-saffron">Are</span>
               </h2>
 
               <p className="text-lg text-brand-green/80 font-body font-medium leading-relaxed mb-4">
-                {firstSentence}
+                {t("description1")}
               </p>
               <p className="text-base text-brand-stone font-body leading-relaxed mb-10">
-                {rest}
+                {t("description2")} {t("qualityStatement")}
               </p>
 
               {/* Decorative accent line */}

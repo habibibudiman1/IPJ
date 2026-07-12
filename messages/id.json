@@ -3,12 +3,16 @@
     "home": "Beranda",
     "about": "Tentang Kami",
     "products": "Produk",
+    "applications": "Aplikasi",
     "advantages": "Keunggulan",
+    "whyUs": "Mengapa Kami",
     "contact": "Kontak",
     "getQuote": "Dapatkan Penawaran"
   },
   "hero": {
     "title": "Integrated Supply Service untuk Bahan Makanan Berkualitas Tinggi",
+    "titleLine1": "Layanan Pasokan",
+    "titleLine2": "Terintegrasi",
     "subtitle": "Layanan Pasokan Terintegrasi dengan Komitmen Mendukung Bisnis Anda",
     "contactUs": "Hubungi Kami",
     "inquireProducts": "Tanyakan Produk",
@@ -16,6 +20,11 @@
     "certifiedSafe": "Bahan Bersertifikat & Aman",
     "sustainable": "Berkelanjutan",
     "ecoFriendly": "Sumber Ramah Lingkungan"
+  },
+  "stats": {
+    "experience": "Tahun Pengalaman",
+    "clients": "Klien Dilayani",
+    "products": "Produk Tersedia"
   },
   "metrics": {
     "quality": "Pemasok bahan makanan berkualitas tinggi di Indonesia",
@@ -306,6 +315,79 @@
   "infiniteScroll": {
     "title": "Jangkauan Produk Kami",
     "subtitle": "Solusi bahan makanan komprehensif untuk setiap kebutuhan manufaktur"
+  },
+  "certifications": {
+    "title": "Sertifikasi & Kepatuhan",
+    "subtitle": "Memenuhi standar keamanan pangan internasional yang ketat untuk produksi industri",
+    "halal": {
+      "title": "Sertifikasi Halal",
+      "desc": "Diverifikasi oleh Halal Indonesia (BPJPH) untuk kepatuhan mutlak.",
+      "code": "ID0021000025..."
+    },
+    "bpom": {
+      "title": "Terdaftar BPOM",
+      "desc": "Terdaftar sepenuhnya di BPOM RI untuk keamanan konsumen.",
+      "code": "MD 275728..."
+    },
+    "haccp": {
+      "title": "Prinsip HACCP",
+      "desc": "Analisis bahaya yang ketat dan pelacakan titik kendali kritis.",
+      "code": "Sertifikasi Terpenuhi"
+    },
+    "iso": {
+      "title": "ISO 22000",
+      "desc": "Standar manajemen keamanan pangan global diterapkan di pergudangan.",
+      "code": "SGS Verified"
+    }
+  },
+  "techSpecs": {
+    "title": "Spesifikasi Teknis",
+    "subtitle": "Spesifikasi dan parameter presisi untuk R&D manufaktur makanan",
+    "headers": {
+      "parameter": "Parameter Spesifikasi",
+      "potatoFlakes": "Potato Flakes",
+      "glucoseSyrup": "Sirup Glukosa (DE 45.9)",
+      "margarine": "Krim Margarin"
+    },
+    "rows": {
+      "moisture": "Kadar Air / Kelembaban",
+      "moisturePotato": "Maks 8.0%",
+      "moistureGlucose": "18.0% - 22.0%",
+      "moistureMargarine": "Maks 16.0%",
+      "packaging": "Kemasan Industri",
+      "packagingPotato": "Kantong Kertas Multi-ply 25 kg",
+      "packagingGlucose": "IBC Tank / Drum Baja 300 kg",
+      "packagingMargarine": "Kotak Karton 15 kg / 25 kg",
+      "moq": "Jumlah Minimum Pemesanan (MOQ)",
+      "moqPotato": "1 Palet (1.000 kg)",
+      "moqGlucose": "4 Drum (1.200 kg)",
+      "moqMargarine": "50 Karton (750 kg)",
+      "shelfLife": "Umur Simpan",
+      "shelfLifePotato": "12 Bulan (Suhu Dingin & Kering)",
+      "shelfLifeGlucose": "24 Bulan (Suhu Ruang)",
+      "shelfLifeMargarine": "9 Bulan (Suhu Pendingin)"
+    },
+    "downloadSpec": "Unduh Spec Sheet (PDF)",
+    "requestCoa": "Ajukan Permintaan Dokumen CoA",
+    "coaRequestMessage": "Halo, saya ingin mengajukan permintaan dokumen Certificate of Analysis (CoA) untuk produk Intiboga."
+  },
+  "workProcess": {
+    "title": "Proses Kerja Kami",
+    "subtitle": "Menjamin kontrol kualitas dan stabilitas pasokan dari pengadaan hingga pengiriman",
+    "steps": {
+      "step1": {
+        "title": "1. Pengadaan Berkualitas",
+        "desc": "Seleksi ketat bahan baku pertanian premium dengan audit pemasok yang ketat."
+      },
+      "step2": {
+        "title": "2. Uji Lab & Jaminan Mutu",
+        "desc": "Pengujian parameter fisik dan kimia di laboratorium untuk menerbitkan Certificate of Analysis (CoA)."
+      },
+      "step3": {
+        "title": "3. Pengiriman Logistik Aman",
+        "desc": "Penyimpanan terkontrol suhu dan pengiriman B2B ke seluruh nusantara dengan jaminan jadwal."
+      }
+    }
   },
   "common": {
     "readMore": "Baca Selengkapnya",

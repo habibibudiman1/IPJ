@@ -5,18 +5,20 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { useTranslations } from "next-intl";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Products", href: "#products" },
-  { name: "Applications", href: "#applications" },
-  { name: "Why Us", href: "#whyus" },
-  { name: "Contact", href: "#contact" },
+  { key: "home", href: "#home" },
+  { key: "about", href: "#about" },
+  { key: "products", href: "#products" },
+  { key: "applications", href: "#applications" },
+  { key: "whyUs", href: "#whyus" },
+  { key: "contact", href: "#contact" },
 ];
 
 export function Navigation() {
+  const t = useTranslations("nav");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -60,7 +62,7 @@ export function Navigation() {
         className={`absolute inset-0 transition-all duration-500 ${
           scrolled
             ? "bg-brand-green-dark/95 backdrop-blur-xl shadow-2xl shadow-black/20"
-            : "bg-gradient-to-b from-black/30 to-transparent"
+            : "bg-linear-to-b from-black/30 to-transparent"
         }`}
       />
 
@@ -91,17 +93,17 @@ export function Navigation() {
             className={`flex items-center gap-1 px-2 py-1.5 rounded-full border transition-all duration-500 ${
               scrolled
                 ? "border-white/10 bg-white/5"
-                : "border-white/20 bg-white/10 backdrop-blur-sm"
+                : "border-white/20 bg-white/10 backdrop-blur-xs"
             }`}
           >
             {navItems.map((item) => {
               const isActive = activeSection === item.href.replace("#", "");
               return (
                 <a
-                  key={item.name}
+                  key={item.key}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="relative px-4 py-1.5 text-sm font-medium font-body transition-colors duration-200 rounded-full"
+                  className="relative px-4 py-1.5 text-sm font-medium font-body transition-colors duration-200 rounded-full animate-fade-in-up"
                 >
                   {isActive && (
                     <motion.span
@@ -115,7 +117,7 @@ export function Navigation() {
                       isActive ? "text-white" : "text-white/70 hover:text-white"
                     }`}
                   >
-                    {item.name}
+                    {t(item.key)}
                   </span>
                 </a>
               );
@@ -129,9 +131,9 @@ export function Navigation() {
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
-            className="inline-flex items-center gap-2 px-5 py-2 bg-white text-brand-green font-semibold text-sm rounded-full hover:bg-brand-cream transition-all duration-300 hover:shadow-lg font-body"
+            className="inline-flex items-center gap-2 px-5 py-2 bg-white text-brand-green font-semibold text-sm rounded-full hover:bg-brand-cream transition-all duration-300 hover:shadow-lg font-body focus:ring-2 focus:ring-brand-saffron focus:outline-hidden"
           >
-            Get In Touch
+            {t("getQuote")}
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -171,7 +173,7 @@ export function Navigation() {
             <div className="p-3 space-y-1">
               {navItems.map((item, index) => (
                 <motion.a
-                  key={item.name}
+                  key={item.key}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
                   initial={{ opacity: 0, x: -10 }}
@@ -180,7 +182,7 @@ export function Navigation() {
                   className="flex items-center gap-3 py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-xl transition-all font-body"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-saffron/50" />
-                  {item.name}
+                  {t(item.key)}
                 </motion.a>
               ))}
               <div className="pt-3 pb-1 border-t border-white/10 flex flex-col gap-2 px-1">
@@ -190,7 +192,7 @@ export function Navigation() {
                   onClick={(e) => handleNavClick(e, "#contact")}
                   className="block w-full text-center py-2.5 bg-brand-saffron text-white font-semibold text-sm rounded-xl hover:bg-brand-saffron/90 transition-all font-body"
                 >
-                  Get In Touch
+                  {t("getQuote")}
                 </a>
               </div>
             </div>

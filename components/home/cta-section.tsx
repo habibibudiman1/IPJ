@@ -23,7 +23,7 @@ export function CTASection() {
           aria-hidden
         >
           <span
-            className="font-display font-bold text-white/[0.025] whitespace-nowrap leading-none"
+            className="font-display font-bold text-white/2.5 whitespace-nowrap leading-none"
             style={{ fontSize: "clamp(8rem, 18vw, 16rem)" }}
           >
             TOGETHER
@@ -31,7 +31,7 @@ export function CTASection() {
         </div>
 
         {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-saffron/40 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-brand-saffron/40 to-transparent" />
 
         <div className="relative container mx-auto px-4 lg:px-8 text-center">
           {/* Label */}
@@ -53,7 +53,7 @@ export function CTASection() {
             initial={{ opacity: 0, y: 40 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-white leading-[1.0] mb-6"
+            className="font-display text-white leading-none mb-6"
             style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}
           >
             Let&apos;s Grow{" "}
@@ -106,7 +106,7 @@ export function CTASection() {
         </div>
 
         {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </motion.div>
     </section>
   );

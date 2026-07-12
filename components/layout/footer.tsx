@@ -1,23 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { COMPANY_CONFIG } from "@/config/company";
 
 export function Footer() {
-  const [contact, setContact] = useState({
-    companyName: "PT. Intiboga Pangan Jaya",
-    address: "JL. Raya Rancaekek – Majalaya No. 254, Bandung, Jawa Barat",
-    email: "faridalfarizi@intiboga.com",
-    phone: "+62 813 6119 6131",
-  });
-
-  useEffect(() => {
-    const saved = localStorage.getItem("ipj_contact");
-    if (saved) {
-      setContact(JSON.parse(saved));
-    }
-  }, []);
+  const contact = {
+    companyName: COMPANY_CONFIG.legalName,
+    address: COMPANY_CONFIG.address.fullAddress,
+    email: COMPANY_CONFIG.contact.email,
+    phone: COMPANY_CONFIG.contact.phone,
+  };
 
   const scrollTo = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -33,7 +26,7 @@ export function Footer() {
         aria-hidden
       >
         <span
-          className="font-display font-bold text-white/[0.025] leading-none whitespace-nowrap"
+          className="font-display font-bold text-white/2.5 leading-none whitespace-nowrap"
           style={{ fontSize: "clamp(6rem, 14vw, 12rem)" }}
         >
           INTIBOGA
@@ -41,7 +34,7 @@ export function Footer() {
       </div>
 
       {/* Top accent */}
-      <div className="h-px bg-gradient-to-r from-transparent via-brand-saffron/30 to-transparent" />
+      <div className="h-px bg-linear-to-r from-transparent via-brand-saffron/30 to-transparent" />
 
       <div className="relative container mx-auto px-4 lg:px-8 pt-16 pb-8">
         
@@ -69,7 +62,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-white/40 font-body leading-relaxed mb-8 max-w-xs">
-              Your trusted partner for high-quality food ingredients in Indonesia. Serving the food industry for over 15 years.
+              Your trusted partner for high-quality food ingredients in Indonesia. Serving the food industry for {COMPANY_CONFIG.stats.experienceYears} years.
             </p>
             {/* Email CTA */}
             <a
@@ -167,7 +160,7 @@ export function Footer() {
             className="group flex items-center gap-2 text-[11px] text-white/25 hover:text-white/60 transition-colors font-body"
           >
             Back to top
-            <span className="w-5 h-5 rounded-full border border-white/20 group-hover:border-white/40 flex items-center justify-center transition-colors rotate-[-90deg]">
+            <span className="w-5 h-5 rounded-full border border-white/20 group-hover:border-white/40 flex items-center justify-center transition-colors -rotate-90">
               <ArrowUpRight className="w-2.5 h-2.5" />
             </span>
           </a>

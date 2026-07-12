@@ -21,7 +21,7 @@ export function FinalCTA() {
           className="relative rounded-2xl overflow-hidden bg-dark-section px-6 py-16 text-center"
         >
           {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-primary via-secondary to-primary" />
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-secondary/10 rounded-full blur-3xl" />
 

@@ -3,12 +3,16 @@
     "home": "Home",
     "about": "About",
     "products": "Products",
+    "applications": "Applications",
     "advantages": "Advantages",
+    "whyUs": "Why Choose Us",
     "contact": "Contact",
     "getQuote": "Get Quote"
   },
   "hero": {
     "title": "Integrated Supply Service for High-Quality Food Ingredients",
+    "titleLine1": "Integrated Supply",
+    "titleLine2": "Service",
     "subtitle": "Integrated Supply Service with Commitment to Supporting Your Business",
     "contactUs": "Contact Us",
     "inquireProducts": "Inquire Products",
@@ -16,6 +20,11 @@
     "certifiedSafe": "Certified & Safe Ingredients",
     "sustainable": "Sustainable",
     "ecoFriendly": "Eco-Friendly Sourcing"
+  },
+  "stats": {
+    "experience": "Years Experience",
+    "clients": "Clients Served",
+    "products": "Products Available"
   },
   "metrics": {
     "quality": "High-quality food ingredient supplier in Indonesia",
@@ -306,6 +315,79 @@
   "infiniteScroll": {
     "title": "Our Product Range",
     "subtitle": "Comprehensive food ingredient solutions for every manufacturing need"
+  },
+  "certifications": {
+    "title": "Certifications & Compliance",
+    "subtitle": "Meeting strict international food safety standards for industrial production",
+    "halal": {
+      "title": "Halal Certified",
+      "desc": "Verified by Halal Indonesia (BPJPH) for absolute compliance.",
+      "code": "ID0021000025..."
+    },
+    "bpom": {
+      "title": "BPOM Registered",
+      "desc": "Fully registered with the Indonesian FDA for consumer safety.",
+      "code": "MD 275728..."
+    },
+    "haccp": {
+      "title": "HACCP Principles",
+      "desc": "Strict hazard analysis and critical control point tracking.",
+      "code": "Certified Compliant"
+    },
+    "iso": {
+      "title": "ISO 22000",
+      "desc": "Global food safety management standards applied in warehousing.",
+      "code": "SGS Verified"
+    }
+  },
+  "techSpecs": {
+    "title": "Technical Specifications",
+    "subtitle": "Precise specifications and parameters for food manufacturing R&D",
+    "headers": {
+      "parameter": "Specification Parameter",
+      "potatoFlakes": "Potato Flakes",
+      "glucoseSyrup": "Glucose Syrup (DE 45.9)",
+      "margarine": "Margarine Cream"
+    },
+    "rows": {
+      "moisture": "Moisture / Water Content",
+      "moisturePotato": "Max 8.0%",
+      "moistureGlucose": "18.0% - 22.0%",
+      "moistureMargarine": "Max 16.0%",
+      "packaging": "Industrial Packaging",
+      "packagingPotato": "25 kg Multi-ply Paper Bag",
+      "packagingGlucose": "300 kg Steel Drum / IBC Tank",
+      "packagingMargarine": "15 kg / 25 kg Carton Box",
+      "moq": "Minimum Order Quantity (MOQ)",
+      "moqPotato": "1 Pallet (1,000 kg)",
+      "moqGlucose": "4 Drums (1,200 kg)",
+      "moqMargarine": "50 Cases (750 kg)",
+      "shelfLife": "Shelf Life",
+      "shelfLifePotato": "12 Months (Cool & Dry)",
+      "shelfLifeGlucose": "24 Months (Ambient Temp)",
+      "shelfLifeMargarine": "9 Months (Refrigerated)"
+    },
+    "downloadSpec": "Download Spec Sheet (PDF)",
+    "requestCoa": "Request Certificate of Analysis (CoA)",
+    "coaRequestMessage": "Hello, I would like to request the Certificate of Analysis (CoA) for Intiboga products."
+  },
+  "workProcess": {
+    "title": "Our Work Process",
+    "subtitle": "Ensuring quality control and supply stability from sourcing to delivery",
+    "steps": {
+      "step1": {
+        "title": "1. Quality Sourcing",
+        "desc": "Rigorous selection of premium agricultural raw materials with strict supplier vetting."
+      },
+      "step2": {
+        "title": "2. Lab Testing & QA",
+        "desc": "Testing of physical and chemical parameters in the lab to issue Certificate of Analysis (CoA)."
+      },
+      "step3": {
+        "title": "3. Safe Logistical Supply",
+        "desc": "Climate-controlled storage and archipelago-wide B2B shipping with scheduled delivery guarantees."
+      }
+    }
   },
   "common": {
     "readMore": "Read More",

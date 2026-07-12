@@ -72,7 +72,7 @@ export function ProductHighlight() {
                 <Card className="h-full overflow-hidden border-2 border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                   {/* Gradient Header with Icon */}
                   <div
-                    className={`relative h-48 bg-gradient-to-br ${product.gradient} p-8 flex items-center justify-center overflow-hidden`}
+                    className={`relative h-48 bg-linear-to-br ${product.gradient} p-8 flex items-center justify-center overflow-hidden`}
                   >
                     <div className="absolute inset-0 bg-black/10"></div>
                     <motion.div
@@ -82,7 +82,7 @@ export function ProductHighlight() {
                       transition={{ duration: 0.5, delay: index * 0.2 }}
                       className="relative"
                     >
-                      <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+                      <div className="bg-white/90 backdrop-blur-xs rounded-2xl p-6 shadow-2xl">
                         <Icon
                           className="w-20 h-20 text-secondary"
                           strokeWidth={1.5}
@@ -108,7 +108,7 @@ export function ProductHighlight() {
                       <div className="space-y-2">
                         {product.applications.slice(0, 3).map((app, i) => (
                           <div key={i} className="flex items-start gap-2">
-                            <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary flex-shrink-0" />
+                            <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
                             <span className="text-sm text-muted-foreground leading-relaxed">
                               {app}
                             </span>

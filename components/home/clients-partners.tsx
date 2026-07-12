@@ -1,112 +1,85 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
 import { Building2 } from "lucide-react";
 import { useScrollReveal } from "@/lib/useScrollReveal";
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const defaultPartners = [
-  { name: "Partner Company A", logo: null },
-  { name: "Partner Company B", logo: null },
-  { name: "Partner Company C", logo: null },
-  { name: "Partner Company D", logo: null },
+  { name: "PT. Sarana Pangan Nusantara", category: "Snack Manufacturer" },
+  { name: "PT. Roti & Bakery Indonesia", category: "Industrial Bakery" },
+  { name: "PT. Food & Beverage Industri", category: "Confectionery" },
+  { name: "PT. Sumber Pangan Jaya", category: "Food Processing" },
 ];
 
 export function ClientsPartners() {
   const { ref, isVisible } = useScrollReveal();
-  const [partners, setPartners] = useState(defaultPartners);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("ipj_partners");
-    
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      const withLogos = parsed.map((partner: any, index: number) => {
-        const savedLogo = localStorage.getItem(`ipj_client_logo_${index}`);
-        return {
-          name: partner.name || `Partner ${index + 1}`,
-          logo: savedLogo || null,
-        };
-      });
-      setPartners(withLogos);
-    } else {
-      // Fallback: check if ipj_clients exists (for backward compatibility)
-      const oldSaved = localStorage.getItem("ipj_clients");
-      if (oldSaved) {
-          const oldParsed = JSON.parse(oldSaved);
-          const mappedOld = oldParsed.map((clientName: string, index: number) => ({
-              name: clientName,
-              logo: null
-          }));
-          setPartners(mappedOld);
-      }
-    }
-  }, []);
+  const t = useTranslations("clients");
+  const partners = defaultPartners;
 
   return (
-    <section className="py-20 lg:py-28 bg-brand-cream border-t border-brand-green/5">
+    <section className="py-24 lg:py-28 bg-white rounded-t-[48px] lg:rounded-t-[80px] mt-[-48px] lg:mt-[-80px] relative z-20 border-t border-white/10">
       <div className="container mx-auto px-4 lg:px-8" ref={ref}>
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
+          
           {/* Section Header */}
           <div
-            className={`mb-16 transition-all duration-700 ${
+            className={`text-center mb-16 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-sm font-semibold rounded-full mb-4 font-body tracking-wide">
-              Our Network
+            <span className="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-full mb-4 font-body tracking-wider uppercase">
+              {t("title")}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-green mb-4 font-heading">
-              Partner Companies
-            </h2>
-            <p className="text-gray-500 font-body max-w-xl mx-auto">
-              We proudly collaborate and supply our ingredients to a diverse range of industry leaders
+            <p className="text-brand-stone font-body max-w-xl mx-auto text-base">
+              {t("subtitle")}
             </p>
           </div>
 
-          {/* Partner Logos Grid */}
-          <div
-            className={`grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 transition-all duration-700 delay-300 ${
+          {/* ─── Infinite Autoplay Marquee Slider (Smooth Loop to Left) ─── */}
+          <div 
+            className={`relative w-full overflow-hidden py-4 transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            {partners.map((partner, i) => (
-              <div
-                key={i}
-                className="group flex flex-col items-center justify-center p-6 h-40 bg-white/60 hover:bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500"
-                style={{ transitionDelay: `${i * 0.1}s` }}
-              >
-                <div className="relative w-full h-16 mb-4 flex justify-center items-center transition-all duration-500 group-hover:scale-105">
-                  {(partner.logo && partner.logo !== "/images/placeholder.png") ? (
-                    <Image 
-                      src={partner.logo} 
-                      alt={partner.name}
-                      fill
-                      className="object-contain"
-                    />
-                  ) : (
-                    <Building2 className="w-10 h-10 text-brand-green/30 group-hover:text-brand-green/50 transition-colors" />
-                  )}
+            {/* Soft gradient fading masks on the left and right edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none" />
+
+            {/* Scrolling Track: Tripled array for seamless infinite looping */}
+            <motion.div
+              className="flex gap-6 w-max"
+              animate={{ x: ["0%", "-33.3333%"] }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 25,
+                  ease: "linear",
+                },
+              }}
+            >
+              {[...partners, ...partners, ...partners].map((partner, i) => (
+                <div
+                  key={i}
+                  className="w-[280px] shrink-0 group flex flex-col items-center justify-center p-6 bg-white hover:bg-brand-green hover:text-white border border-brand-green/5 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-brand-cream/80 text-brand-green flex items-center justify-center mb-4 transition-colors group-hover:bg-white/10 group-hover:text-white shadow-inner">
+                    <Building2 className="w-6 h-6 transition-transform duration-300 group-hover:scale-105" />
+                  </div>
+                  
+                  <span className="text-sm font-bold text-brand-green text-center font-body group-hover:text-white transition-colors block w-full truncate px-2">
+                    {partner.name}
+                  </span>
+                  
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-brand-stone text-center font-body group-hover:text-white/60 transition-colors mt-2">
+                    {partner.category}
+                  </span>
                 </div>
-                <span className="text-xs sm:text-sm font-semibold text-brand-green text-center font-body group-hover:text-brand-saffron transition-colors mt-auto w-full truncate px-2">
-                  {partner.name}
-                </span>
-              </div>
-            ))}
+              ))}
+            </motion.div>
           </div>
 
-          {/* Trust indicator */}
-          <div
-            className={`mt-16 flex items-center justify-center gap-6 transition-all duration-700 delay-500 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="h-px flex-1 max-w-20 bg-brand-green/20" />
-            <p className="text-xs text-gray-400 font-body tracking-widest uppercase">
-              Trusted by industry leaders
-            </p>
-            <div className="h-px flex-1 max-w-20 bg-brand-green/20" />
-          </div>
         </div>
       </div>
     </section>
