@@ -205,9 +205,9 @@ export function ProductsSection() {
                     </DialogTrigger>
 
                     {/* Dialog detail modal */}
-                    <DialogContent className="max-w-4xl overflow-hidden p-0 border-0 rounded-[32px] bg-white">
-                      <div className="grid md:grid-cols-2 h-full">
-                        <div className="relative h-64 md:h-full min-h-[300px] w-full">
+                    <DialogContent className="w-[92vw] max-w-4xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto md:overflow-hidden p-0 border-0 rounded-[24px] md:rounded-[32px] bg-white">
+                      <div className="grid grid-cols-1 md:grid-cols-2 h-full md:max-h-[85vh] overflow-y-auto md:overflow-hidden">
+                        <div className="relative h-48 sm:h-64 md:h-[600px] w-full shrink-0">
                           <Image
                             src={product.image}
                             alt={product.title}
@@ -221,62 +221,64 @@ export function ProductsSection() {
                             </span>
                           </div>
                         </div>
-                        <div className="p-8 md:p-10 flex flex-col justify-center bg-brand-offwhite">
-                          <DialogHeader className="mb-6 text-left">
-                            <DialogTitle className="text-3xl font-display text-brand-green mb-3 text-left leading-tight">
-                              {product.title}
-                            </DialogTitle>
-                            <DialogDescription className="text-base text-brand-stone font-body leading-relaxed text-left">
-                              {product.description}
-                            </DialogDescription>
-                          </DialogHeader>
+                        <div className="p-6 sm:p-8 md:p-10 flex flex-col justify-between bg-brand-offwhite md:overflow-y-auto md:h-[600px]">
+                          <div>
+                            <DialogHeader className="mb-6 text-left">
+                              <DialogTitle className="text-2xl sm:text-3xl font-display text-brand-green mb-3 text-left leading-tight">
+                                {product.title}
+                              </DialogTitle>
+                              <DialogDescription className="text-sm sm:text-base text-brand-stone font-body leading-relaxed text-left">
+                                {product.description}
+                              </DialogDescription>
+                            </DialogHeader>
 
-                          {product.details && product.details.length > 0 && (
-                            <div className="space-y-3">
-                              <h4 className="font-body font-bold text-brand-green text-sm uppercase tracking-widest">
-                                Key Features
-                              </h4>
-                              <ul className="space-y-2.5">
-                                {product.details.map((detail: string, idx: number) => (
-                                  <li key={idx} className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-4 h-4 text-brand-saffron shrink-0 mt-0.5" />
-                                    <span className="text-sm font-body text-brand-stone">{detail}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
+                            {product.details && product.details.length > 0 && (
+                              <div className="space-y-3">
+                                <h4 className="font-body font-bold text-brand-green text-sm uppercase tracking-widest">
+                                  Key Features
+                                </h4>
+                                <ul className="space-y-2.5">
+                                  {product.details.map((detail: string, idx: number) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                      <CheckCircle2 className="w-4 h-4 text-brand-saffron shrink-0 mt-0.5" />
+                                      <span className="text-sm font-body text-brand-stone">{detail}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
 
-                          {/* Packaging & MOQ details */}
-                          <div className="mt-6 pt-5 border-t border-brand-green/8 grid grid-cols-2 gap-4">
-                            <div>
-                              <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">Packaging</span>
-                              <span className="text-sm font-semibold text-brand-green font-body">
-                                {product.title.includes("Potato") ? "25 kg Multi-ply Paper Bag" :
-                                 product.title.includes("Glucose") ? "300 kg Drum / IBC Tank" :
-                                 product.title.includes("Margarine") ? "15 kg / 25 kg Carton Box" :
-                                 "25 kg Woven / Multi-ply Bag"}
-                              </span>
-                            </div>
-                            <div>
-                              <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">MOQ</span>
-                              <span className="text-sm font-semibold text-brand-green font-body">
-                                {product.title.includes("Potato") ? "1 Pallet (1,000 kg)" :
-                                 product.title.includes("Glucose") ? "4 Drums (1,200 kg)" :
-                                 product.title.includes("Margarine") ? "50 Cases (750 kg)" :
-                                 "1 Pallet (1,000 kg)"}
-                              </span>
+                            {/* Packaging & MOQ details */}
+                            <div className="mt-6 pt-5 border-t border-brand-green/8 grid grid-cols-2 gap-4">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">Packaging</span>
+                                <span className="text-sm font-semibold text-brand-green font-body">
+                                  {product.title.includes("Potato") ? "25 kg Multi-ply Paper Bag" :
+                                   product.title.includes("Glucose") ? "300 kg Drum / IBC Tank" :
+                                   product.title.includes("Margarine") ? "15 kg / 25 kg Carton Box" :
+                                   "25 kg Woven / Multi-ply Bag"}
+                                </span>
+                              </div>
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">MOQ</span>
+                                <span className="text-sm font-semibold text-brand-green font-body">
+                                  {product.title.includes("Potato") ? "1 Pallet (1,000 kg)" :
+                                   product.title.includes("Glucose") ? "4 Drums (1,200 kg)" :
+                                   product.title.includes("Margarine") ? "50 Cases (750 kg)" :
+                                   "1 Pallet (1,000 kg)"}
+                                </span>
+                              </div>
                             </div>
                           </div>
 
                           {/* B2B Call to Actions */}
-                          <div className="mt-8 flex gap-3">
+                          <div className="mt-8 flex flex-wrap gap-3 pb-2">
                             <DialogClose asChild>
                               <button
                                 onClick={() => {
                                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="px-5 py-2.5 bg-brand-saffron text-white hover:bg-brand-saffron/90 transition-colors font-body text-xs font-bold rounded-full shadow-md cursor-pointer"
+                                className="px-5 py-2.5 bg-brand-saffron text-white hover:bg-brand-saffron/90 transition-colors font-body text-xs font-bold rounded-full shadow-md cursor-pointer flex-1 sm:flex-initial text-center justify-center"
                               >
                                 Request Quote
                               </button>
@@ -286,9 +288,16 @@ export function ProductsSection() {
                                 onClick={() => {
                                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="px-5 py-2.5 border border-brand-green/15 text-brand-green hover:bg-brand-green/5 transition-colors font-body text-xs font-bold rounded-full cursor-pointer"
+                                className="px-5 py-2.5 border border-brand-green/15 text-brand-green hover:bg-brand-green/5 transition-colors font-body text-xs font-bold rounded-full cursor-pointer flex-1 sm:flex-initial text-center justify-center"
                               >
                                 Request Sample
+                              </button>
+                            </DialogClose>
+                            <DialogClose asChild>
+                              <button
+                                className="md:hidden px-5 py-2.5 bg-brand-stone/10 text-brand-stone hover:bg-brand-stone/20 transition-colors font-body text-xs font-bold rounded-full cursor-pointer w-full text-center justify-center"
+                              >
+                                Kembali / Tutup
                               </button>
                             </DialogClose>
                           </div>
@@ -369,9 +378,9 @@ export function ProductsSection() {
                 </div>
               </DialogTrigger>
 
-              <DialogContent className="max-w-4xl overflow-hidden p-0 border-0 rounded-[32px] bg-white">
-                <div className="grid md:grid-cols-2 h-full">
-                  <div className="relative h-64 md:h-full min-h-[300px] w-full">
+              <DialogContent className="w-[92vw] max-w-4xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto md:overflow-hidden p-0 border-0 rounded-[24px] md:rounded-[32px] bg-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 h-full md:max-h-[85vh] overflow-y-auto md:overflow-hidden">
+                  <div className="relative h-48 sm:h-64 md:h-[600px] w-full shrink-0">
                     <Image
                       src={products[mobileIdx].image}
                       alt={products[mobileIdx].title}
@@ -385,62 +394,64 @@ export function ProductsSection() {
                       </span>
                     </div>
                   </div>
-                  <div className="p-8 md:p-10 flex flex-col justify-center bg-brand-offwhite">
-                    <DialogHeader className="mb-6 text-left">
-                      <DialogTitle className="text-3xl font-display text-brand-green mb-3 text-left leading-tight">
-                        {products[mobileIdx].title}
-                      </DialogTitle>
-                      <DialogDescription className="text-base text-brand-stone font-body leading-relaxed text-left">
-                        {products[mobileIdx].description}
-                      </DialogDescription>
-                    </DialogHeader>
+                  <div className="p-6 sm:p-8 md:p-10 flex flex-col justify-between bg-brand-offwhite md:overflow-y-auto md:h-[600px]">
+                    <div>
+                      <DialogHeader className="mb-6 text-left">
+                        <DialogTitle className="text-2xl sm:text-3xl font-display text-brand-green mb-3 text-left leading-tight">
+                          {products[mobileIdx].title}
+                        </DialogTitle>
+                        <DialogDescription className="text-sm sm:text-base text-brand-stone font-body leading-relaxed text-left">
+                          {products[mobileIdx].description}
+                        </DialogDescription>
+                      </DialogHeader>
 
-                    {products[mobileIdx].details && products[mobileIdx].details.length > 0 && (
-                      <div className="space-y-3">
-                        <h4 className="font-body font-bold text-brand-green text-sm uppercase tracking-widest">
-                          Key Features
-                        </h4>
-                        <ul className="space-y-2.5">
-                          {products[mobileIdx].details.map((detail: string, idx: number) => (
-                            <li key={idx} className="flex items-start gap-3">
-                              <CheckCircle2 className="w-4 h-4 text-brand-saffron shrink-0 mt-0.5" />
-                              <span className="text-sm font-body text-brand-stone">{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                      {products[mobileIdx].details && products[mobileIdx].details.length > 0 && (
+                        <div className="space-y-3">
+                          <h4 className="font-body font-bold text-brand-green text-sm uppercase tracking-widest">
+                            Key Features
+                          </h4>
+                          <ul className="space-y-2.5">
+                            {products[mobileIdx].details.map((detail: string, idx: number) => (
+                              <li key={idx} className="flex items-start gap-3">
+                                <CheckCircle2 className="w-4 h-4 text-brand-saffron shrink-0 mt-0.5" />
+                                <span className="text-sm font-body text-brand-stone">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
-                    {/* Packaging & MOQ details */}
-                    <div className="mt-6 pt-5 border-t border-brand-green/8 grid grid-cols-2 gap-4">
-                      <div>
-                        <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">Packaging</span>
-                        <span className="text-sm font-semibold text-brand-green font-body">
-                          {products[mobileIdx].title.includes("Potato") ? "25 kg Multi-ply Paper Bag" :
-                           products[mobileIdx].title.includes("Glucose") ? "300 kg Drum / IBC Tank" :
-                           products[mobileIdx].title.includes("Margarine") ? "15 kg / 25 kg Carton Box" :
-                           "25 kg Woven / Multi-ply Bag"}
-                        </span>
-                      </div>
-                      <div>
-                        <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">MOQ</span>
-                        <span className="text-sm font-semibold text-brand-green font-body">
-                          {products[mobileIdx].title.includes("Potato") ? "1 Pallet (1,000 kg)" :
-                           products[mobileIdx].title.includes("Glucose") ? "4 Drums (1,200 kg)" :
-                           products[mobileIdx].title.includes("Margarine") ? "50 Cases (750 kg)" :
-                           "1 Pallet (1,000 kg)"}
-                        </span>
+                      {/* Packaging & MOQ details */}
+                      <div className="mt-6 pt-5 border-t border-brand-green/8 grid grid-cols-2 gap-4">
+                        <div>
+                          <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">Packaging</span>
+                          <span className="text-sm font-semibold text-brand-green font-body">
+                            {products[mobileIdx].title.includes("Potato") ? "25 kg Multi-ply Paper Bag" :
+                             products[mobileIdx].title.includes("Glucose") ? "300 kg Drum / IBC Tank" :
+                             products[mobileIdx].title.includes("Margarine") ? "15 kg / 25 kg Carton Box" :
+                             "25 kg Woven / Multi-ply Bag"}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] uppercase font-bold text-brand-stone tracking-wider block">MOQ</span>
+                          <span className="text-sm font-semibold text-brand-green font-body">
+                            {products[mobileIdx].title.includes("Potato") ? "1 Pallet (1,000 kg)" :
+                             products[mobileIdx].title.includes("Glucose") ? "4 Drums (1,200 kg)" :
+                             products[mobileIdx].title.includes("Margarine") ? "50 Cases (750 kg)" :
+                             "1 Pallet (1,000 kg)"}
+                          </span>
+                        </div>
                       </div>
                     </div>
 
                     {/* B2B Call to Actions */}
-                    <div className="mt-8 flex gap-3">
+                    <div className="mt-8 flex flex-wrap gap-3 pb-2">
                       <DialogClose asChild>
                         <button
                           onClick={() => {
                             document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                           }}
-                          className="px-5 py-2.5 bg-brand-saffron text-white hover:bg-brand-saffron/90 transition-colors font-body text-xs font-bold rounded-full shadow-md cursor-pointer"
+                          className="px-5 py-2.5 bg-brand-saffron text-white hover:bg-brand-saffron/90 transition-colors font-body text-xs font-bold rounded-full shadow-md cursor-pointer flex-1 sm:flex-initial text-center justify-center"
                         >
                           Request Quote
                         </button>
@@ -450,9 +461,16 @@ export function ProductsSection() {
                           onClick={() => {
                             document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                           }}
-                          className="px-5 py-2.5 border border-brand-green/15 text-brand-green hover:bg-brand-green/5 transition-colors font-body text-xs font-bold rounded-full cursor-pointer"
+                          className="px-5 py-2.5 border border-brand-green/15 text-brand-green hover:bg-brand-green/5 transition-colors font-body text-xs font-bold rounded-full cursor-pointer flex-1 sm:flex-initial text-center justify-center"
                         >
                           Request Sample
+                        </button>
+                      </DialogClose>
+                      <DialogClose asChild>
+                        <button
+                          className="md:hidden px-5 py-2.5 bg-brand-stone/10 text-brand-stone hover:bg-brand-stone/20 transition-colors font-body text-xs font-bold rounded-full cursor-pointer w-full text-center justify-center"
+                        >
+                          Kembali / Tutup
                         </button>
                       </DialogClose>
                     </div>

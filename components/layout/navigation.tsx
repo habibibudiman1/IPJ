@@ -13,7 +13,6 @@ const navItems = [
   { key: "about", href: "#about" },
   { key: "products", href: "#products" },
   { key: "applications", href: "#applications" },
-  { key: "whyUs", href: "#whyus" },
   { key: "contact", href: "#contact" },
 ];
 
