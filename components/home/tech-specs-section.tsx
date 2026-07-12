@@ -110,7 +110,7 @@ export function TechSpecsSection() {
                       key={idx}
                       className="hover:bg-brand-cream/15 transition-colors duration-200"
                     >
-                      <td className="p-6 text-sm font-bold text-brand-green font-body bg-brand-cream/[0.02]">
+                      <td className="p-6 text-sm font-bold text-brand-green font-body bg-brand-cream/2">
                         {row.parameter}
                       </td>
                       <td className="p-6 text-sm font-medium text-brand-stone font-body">

@@ -177,7 +177,7 @@ export function ProductsSection() {
                         />
 
                         {/* Dark gradient overlay matching Gojek card shadow */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-all duration-500" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-transparent transition-all duration-500" />
 
                         {/* Tag badge */}
                         <div className="absolute top-6 left-6">
@@ -214,7 +214,7 @@ export function ProductsSection() {
                             fill
                             className="object-cover"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/30 md:from-black/40 to-transparent" />
+                          <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-black/30 md:from-black/40 to-transparent" />
                           <div className="absolute bottom-6 left-6">
                             <span className="px-4 py-1.5 bg-brand-saffron text-white text-xs font-bold tracking-widest uppercase rounded-full font-body">
                               {product.tag}
@@ -357,7 +357,7 @@ export function ProductsSection() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-transparent" />
                   
                   {/* Tag */}
                   <div className="absolute top-5 left-5">
@@ -387,7 +387,7 @@ export function ProductsSection() {
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/30 md:from-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-black/30 md:from-black/40 to-transparent" />
                     <div className="absolute bottom-6 left-6">
                       <span className="px-4 py-1.5 bg-brand-saffron text-white text-xs font-bold tracking-widest uppercase rounded-full font-body">
                         {products[mobileIdx].tag}

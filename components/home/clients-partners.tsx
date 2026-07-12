@@ -43,8 +43,8 @@ export function ClientsPartners() {
             }`}
           >
             {/* Soft gradient fading masks on the left and right edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-white via-white/50 to-transparent z-10 pointer-events-none" />
 
             {/* Scrolling Track: Tripled array for seamless infinite looping */}
             <motion.div

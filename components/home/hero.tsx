@@ -30,10 +30,10 @@ export function Hero() {
         />
         {/* Soft, rich horizontal gradient overlay from left to right */}
         <div
-          className="absolute inset-0 bg-gradient-to-r from-[#172c0b] via-[#1b320d]/95 to-brand-green-dark/30"
+          className="absolute inset-0 bg-linear-to-r from-[#172c0b] via-[#1b320d]/95 to-brand-green-dark/30"
         />
         {/* Bottom vignette overlay to blend into next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-brand-green-dark via-brand-green-dark/40 to-transparent" />
         
         {/* Fine grain texture to feel premium and organic */}
         <div
